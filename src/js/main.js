@@ -58,23 +58,20 @@ map.on('geosearch/showlocation', async () => {
 
   console.log(`${lat},${lon},${city},${state}`);
 
+  // Build data object to send to database
   const location = {
     city, state, lat, lon
   };
-
-  postDB(location);
-  // Build data object to send to database
-  // Setup funciton to handle data being saved to database
-  
-
+ 
   // popup information for marker
   const popupContent = `${city},${state}<br>${lat},${lon}`
   marker.setLatLng([lat,lon]);
   marker.bindPopup(popupContent);
-
+  
+  postDB(location);
 });
 
-
+// Setup funciton to handle data being saved to database
 async function postDB(location){
   console.log(location);
   try {

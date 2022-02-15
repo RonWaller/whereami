@@ -11,7 +11,6 @@ const app = express();
 app.use(cors())
 app.use(express.json());
 
-// mongoose.connect('mongodb://localhost:27017/mapinfodb');
 mongoose.connect(process.env.MONGODB_URI);
 
 const db = mongoose.connection;

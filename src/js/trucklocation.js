@@ -9,17 +9,13 @@ const axios = require('axios');
 // TODO Get Search data and save to DB
 
 function buildMap(data) {
-  console.log('data:',data);
   const lat = data[0].lat;
   const lon = data[0].lon;
   const city = data[0].city;
   const state = data[0].state;
   const timestamp = data[0].createdAt;
-  console.log(timestamp);
   const datetime = new Date(timestamp).toLocaleString();
-  console.log(datetime);
-  
-  
+   
 
   // Creating map object
   const map = new L.map('truckingmap').setView([lat, lon], 10);
@@ -47,7 +43,7 @@ function buildMap(data) {
 };
 
 async function getLocation(){
-  // console.log(location);
+  
   try {
         const response = await axios.get('http://127.0.0.1:8080/locations');
         console.log('response:',response);
