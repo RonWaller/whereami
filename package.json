@@ -6,8 +6,7 @@
     "description": "Web Development project template",
     "scripts": {
         "dev": "parcel --open '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'",
-        "build": "parcel build",
-        "serve": "nodemon './backend/server.js'"
+        "build": "parcel build"
     },
     "author": "Ron Waller",
     "license": "MIT",
@@ -40,10 +39,7 @@
     },
     "dependencies": {
         "axios": "^0.25.0",
-        "cors": "^2.8.5",
-        "express": "^4.17.2",
-        "leaflet-geosearch": "^3.6.0",
-        "mongoose": "^6.2.1"
+        "leaflet-geosearch": "^3.6.0"
     },
     "main": "index.js",
     "keywords": []
