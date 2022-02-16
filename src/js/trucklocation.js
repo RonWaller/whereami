@@ -1,4 +1,5 @@
-import L from 'leaflet';
+// import L from 'leaflet';
+const L = require('leaflet');
 import "leaflet/dist/leaflet.css";
 import '/node_modules/leaflet-geosearch/dist/geosearch.css';
 const axios = require('axios');
@@ -18,10 +19,11 @@ function buildMap(data) {
    
 
   // Creating map object
-  const map = new L.map('truckingmap').setView([lat, lon], 10);
+  const map = L.map('truckingmap').setView([lat, lon], 7);
+  
   // Creating attribution and tiles for map
   const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-  const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+  const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
   const tiles = L.tileLayer(tileUrl, {attribution});
   tiles.addTo(map);
 
@@ -37,7 +39,6 @@ function buildMap(data) {
 
   // popup information for marker
   const popupContent = `${city},${state}<br>${lat},${lon}<br>${datetime}`
-  // marker.setLatLng([lat,lon]);
   marker.bindPopup(popupContent);
 
 };
@@ -46,7 +47,6 @@ async function getLocation(){
   
   try {
         const response = await axios.get('http://127.0.0.1:8080/locations');
-        console.log('response:',response);
         buildMap(response.data);
   } catch (error) {
         console.error(error);
