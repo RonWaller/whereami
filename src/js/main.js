@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 import L from '/node_modules/leaflet';
 import "leaflet/dist/leaflet.css";
 import { GeoSearchControl,OpenStreetMapProvider } from 'leaflet-geosearch';
@@ -75,9 +75,9 @@ map.on('geosearch/showlocation', async () => {
 // Setup funciton to handle data being saved to database
 async function postDB(location){
   // console.log(location);
-  const url = process.env.SERVER_URL;
+  // const url = process.env.SERVER_URL;
   try {
-        const response = await axios.post(`${url}/add_location`, location);
+        const response = await axios.post('https://trackmytravels.herokuapp.com/add_location', location);
         console.log(response);
   } catch (error) {
         console.error(error);

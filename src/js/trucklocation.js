@@ -1,4 +1,4 @@
-require('dotenv').config()
+// require('dotenv').config()
 import L from '/node_modules/leaflet';
 import "leaflet/dist/leaflet.css";
 import '/node_modules/leaflet-geosearch/dist/geosearch.css';
@@ -44,9 +44,9 @@ function buildMap(data) {
 };
 
 async function getLocation(){
-  const url = process.env.SERVER_URL;
+  // const url = process.env.SERVER_URL;
   try {
-        const response = await axios.get(`${url}/locations`);
+        const response = await axios.get('https://trackmytravels.herokuapp.com/locations');
         buildMap(response.data);
   } catch (error) {
         console.error(error);
