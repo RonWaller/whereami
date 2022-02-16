@@ -79,13 +79,13 @@ body {
     background-color: rgb(70, 160, 245);
 }
 
-.container {
-    /* width: 80%; */
+/* .container {
+    width: 80%;
     max-width: 1440px;
     margin: 0 auto;
-}
+} */
 
 #truckingmap {
-    height: 90vh;
+    height: 100vh;
     border: 2px solid #000;
 }
