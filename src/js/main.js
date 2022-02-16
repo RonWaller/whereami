@@ -1,4 +1,4 @@
-import L from 'leaflet';
+import L from '/node_modules/leaflet';
 import "leaflet/dist/leaflet.css";
 import { GeoSearchControl,OpenStreetMapProvider } from 'leaflet-geosearch';
 import '/node_modules/leaflet-geosearch/dist/geosearch.css';
