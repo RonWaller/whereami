@@ -1,3 +1,4 @@
+require('dotenv').config();
 import L from '/node_modules/leaflet';
 import "leaflet/dist/leaflet.css";
 import { GeoSearchControl,OpenStreetMapProvider } from 'leaflet-geosearch';
