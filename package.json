@@ -39,6 +39,7 @@
     },
     "dependencies": {
         "axios": "^0.25.0",
+        "leaflet": "^1.7.1",
         "leaflet-geosearch": "^3.6.0"
     },
     "main": "index.js",
