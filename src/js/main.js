@@ -73,9 +73,10 @@ map.on('geosearch/showlocation', async () => {
 
 // Setup funciton to handle data being saved to database
 async function postDB(location){
-  console.log(location);
+  // console.log(location);
+  const url = process.env.SERVER_URL;
   try {
-        const response = await axios.post('http://127.0.0.1:8080/add_location', location);
+        const response = await axios.post(`${url}/add_location`, location);
         console.log(response);
   } catch (error) {
         console.error(error);

@@ -44,9 +44,9 @@ function buildMap(data) {
 };
 
 async function getLocation(){
-  
+  const url = process.env.SERVER_URL;
   try {
-        const response = await axios.get('http://127.0.0.1:8080/locations');
+        const response = await axios.get(`${url}/locations`);
         buildMap(response.data);
   } catch (error) {
         console.error(error);
