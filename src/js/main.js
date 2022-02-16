@@ -1,4 +1,4 @@
-const L = require('leaflet');
+import L from 'leaflet';
 import "leaflet/dist/leaflet.css";
 import { GeoSearchControl,OpenStreetMapProvider } from 'leaflet-geosearch';
 import '/node_modules/leaflet-geosearch/dist/geosearch.css';
