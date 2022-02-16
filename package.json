@@ -1,24 +1,23 @@
 {
-    "name": "trucking-map-mobile",
-    "source": "src/index.html",
-    "browserslist": "> 0.5%, last 2 versions, not dead",
-    "version": "1.0.0",
-    "description": "Web Development project template",
-    "scripts": {
-        "dev": "parcel --open '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'",
-        "build": "parcel build"
-    },
-    "author": "Ron Waller",
-    "license": "MIT",
-    "devDependencies": {
-        "parcel": "^2.0.1"
-        
-    },
-    "dependencies": {
-        "axios": "^0.25.0",
-        "leaflet": "^1.7.1",
-        "leaflet-geosearch": "^3.6.0"
-    },
-    "main": "index.js",
-    "keywords": []
+  "name": "trucking-map-mobile",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "version": "1.0.0",
+  "description": "Web Development project template",
+  "scripts": {
+    "dev": "parcel --open '/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox'",
+    "build": "parcel build"
+  },
+  "author": "Ron Waller",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "leaflet": "^1.7.1",
+    "leaflet-geosearch": "^3.6.0"
+  },
+  "main": "index.js",
+  "keywords": []
 }
